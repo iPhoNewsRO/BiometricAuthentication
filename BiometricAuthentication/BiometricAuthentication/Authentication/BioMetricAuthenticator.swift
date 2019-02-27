@@ -85,7 +85,7 @@ public extension BioMetricAuthenticator {
         var context: LAContext!
         if BioMetricAuthenticator.shared.isReuseDurationSet() {
             context = BioMetricAuthenticator.shared.context
-        }else {
+        } else {
             context = LAContext()
         }
         context.localizedFallbackTitle = fallbackTitle
@@ -96,8 +96,13 @@ public extension BioMetricAuthenticator {
         }
         
         // authenticate
+        if #available(iOS 9.0, *) {
+            BioMetricAuthenticator.shared.evaluate(policy: LAPolicy.deviceOwnerAuthentication, with: context, reason: reasonString, success: successBlock, failure: failureBlock)
+        } else {
+            // Fallback on earlier versions
             BioMetricAuthenticator.shared.evaluate(policy: LAPolicy.deviceOwnerAuthenticationWithBiometrics, with: context, reason: reasonString, success: successBlock, failure: failureBlock)
         }
+    }
     
     /// Check for device passcode authentication
     class func authenticateWithPasscode(reason: String, cancelTitle: String? = "", success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
