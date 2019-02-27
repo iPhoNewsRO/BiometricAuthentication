@@ -5,10 +5,13 @@ It's very simple and easy to use that handles Touch ID and Face ID authenticatio
 **Note:** - Face ID authentication requires user's persmission to be add in info.plist.
 ```swift
 <key>NSFaceIDUsageDescription</key>
-<string>This app requires Face ID permission to authenticate using Face recognition.</string>
+<string>This app requires Face ID in order to unlock your tasks.</string>
 ```
+### Why use this fork? / Version 2.3
+- All pull requests got merged
+- Additional fixes added (check commits)
 
-### What's new in version 2.2
+### Version 2.2
 - Set **AllowableReuseDuration** (in seconds) to auto authenticate when user has just unlocked the device with biometric.
 - This is pretty useful when app comes to foreground or device is just unlocked by the user and you want to authenticate with biometrics.
 ```swift
@@ -21,13 +24,13 @@ BioMetricAuthenticator.shared.allowableReuseDuration = 60   //(iOS 9.0 or later)
 - Check if **TouchID**  or **FaceID** authentication is available for iOS device.
 
 
-![Alt text](https://raw.githubusercontent.com/rushisangani/BiometricAuthentication/master/Images/image1.png "Authenticate")
-![Alt text](https://raw.githubusercontent.com/rushisangani/BiometricAuthentication/master/Images/image2.png "Fallback title")
-![Alt text](https://raw.githubusercontent.com/rushisangani/BiometricAuthentication/master/Images/image3.png "Locked out")
+![Alt text](https://raw.githubusercontent.com/iPhoNewsRO/BiometricAuthentication/master/Images/image1.png "Authenticate")
+![Alt text](https://raw.githubusercontent.com/iPhoNewsRO/BiometricAuthentication/master/Images/image2.png "Fallback title")
+![Alt text](https://raw.githubusercontent.com/iPhoNewsRO/BiometricAuthentication/master/Images/image3.png "Locked out")
 
 ## Features
 
-- Works with Apple Face ID (iPhone X, Xs, XR, XsMax) and other Touch ID having devices.
+- Works with Apple Face ID (iPhone X, Xs, XR, Xs Max) and other Touch ID having devices.
 - Predefined error handling when recognition fails.
 - Automatic authentication with device passcode on multiple failed attempts.
 
@@ -42,13 +45,13 @@ BioMetricAuthenticator.shared.allowableReuseDuration = 60   //(iOS 9.0 or later)
 ### CocoaPods
 
 ```ruby
-pod 'BiometricAuthentication'
+pod 'BiometricAuthentication', :git => 'https://github.com/iPhoNewsRO/BiometricAuthentication'
 ```
 
 ### Carthage
 
 ```ruby
-github "rushisangani/BiometricAuthentication"
+github "iPhoNewsRO/BiometricAuthentication"
 ```
 
 ## Usage
@@ -202,9 +205,9 @@ BioMetricAuthenticator.authenticateWithBioMetrics(reason: "", success: {
     }
 })
 ```
-See [Example](https://github.com/rushisangani/BiometricAuthentication/tree/master/BiometricAuthenticationExample) for more details.
+See [Example](https://github.com/iPhoNewsRO/BiometricAuthentication/tree/master/BiometricAuthenticationExample) for more details.
 
 ## License
 
-BiometricAuthentication is released under the MIT license. [See LICENSE](https://github.com/rushisangani/BiometricAuthentication/blob/master/LICENSE) for details.
+BiometricAuthentication is released under the MIT license. [See LICENSE](https://github.com/iPhoNewsRO/BiometricAuthentication/blob/master/LICENSE) for details.
 
