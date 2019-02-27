@@ -26,9 +26,9 @@ A very simple and easy to use library that handles Touch ID and Face ID authenti
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 8+
-- Swift 3.0+
+- iOS 9.0+ (iOS 11.0.1+ for FaceID)
+- Xcode 9+
+- Swift 4.2
 
 ## Installation
 
