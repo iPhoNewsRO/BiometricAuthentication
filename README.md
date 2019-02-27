@@ -1,13 +1,13 @@
 # BiometricAuthentication
-Use Apple FaceID or TouchID authentication in your app using BiometricAuthentication.
-It's very simple and easy to use that handles Touch ID and Face ID authentication based on the device.
+Use FaceID or TouchID authentication in your app using BiometricAuthentication.
+A very simple and easy to use library that handles Touch ID and Face ID authentication for your app, with a Passcode screen fallback.
 
 ![Alt text](https://raw.githubusercontent.com/iPhoNewsRO/BiometricAuthentication/master/Images/image1.png "Authenticate")
 ![Alt text](https://raw.githubusercontent.com/iPhoNewsRO/BiometricAuthentication/master/Images/image2.png "Fallback title")
 ![Alt text](https://raw.githubusercontent.com/iPhoNewsRO/BiometricAuthentication/master/Images/image3.png "Locked out")
 
 
-**Note:** - Face ID authentication requires user's persmission to be add in info.plist.
+**Note:** Face ID authentication requires user's persmission to be add in info.plist.
 ```swift
 <key>NSFaceIDUsageDescription</key>
 <string>This app requires Face ID in order to unlock your tasks.</string>
